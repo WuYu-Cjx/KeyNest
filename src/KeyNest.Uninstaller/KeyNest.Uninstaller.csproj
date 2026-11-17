@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>KeyNest.Uninstaller</RootNamespace>
+    <AssemblyName>KeyNest.Uninstaller</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\KeyNest.App\Assets\KeyNest.ico</ApplicationIcon>
+    <Description>键巢 KeyNest 卸载程序。</Description>
+    <AssemblyTitle>键巢 KeyNest 卸载程序</AssemblyTitle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KeyNest.UI\KeyNest.UI.csproj" />
+    <ProjectReference Include="..\KeyNest.Core\KeyNest.Core.csproj" />
+  </ItemGroup>
+
+</Project>

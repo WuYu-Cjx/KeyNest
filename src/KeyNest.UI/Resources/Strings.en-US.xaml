@@ -1,0 +1,267 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- ===== Common ===== -->
+    <sys:String x:Key="Common.Next">Next</sys:String>
+    <sys:String x:Key="Common.Back">Back</sys:String>
+    <sys:String x:Key="Common.Cancel">Cancel</sys:String>
+    <sys:String x:Key="Common.Close">Close</sys:String>
+    <sys:String x:Key="Common.Finish">Finish</sys:String>
+    <sys:String x:Key="Common.Browse">Browse…</sys:String>
+    <sys:String x:Key="Common.Retry">Retry installation</sys:String>
+
+    <!-- ===== App ===== -->
+    <sys:String x:Key="App.ProductName">KeyNest</sys:String>
+    <sys:String x:Key="App.ProductFullName">KeyNest</sys:String>
+    <sys:String x:Key="App.Tagline">Every shortcut, right where you need it.</sys:String>
+    <sys:String x:Key="App.ShortTagline">KeyNest · Every shortcut, right where you need it.</sys:String>
+    <sys:String x:Key="App.Settings">Settings</sys:String>
+    <sys:String x:Key="App.SettingsWindowTitle">KeyNest Settings</sys:String>
+    <sys:String x:Key="App.Minimize">Minimize</sys:String>
+    <sys:String x:Key="App.Close">Close</sys:String>
+
+    <!-- ===== Tray ===== -->
+    <sys:String x:Key="Tray.TitleIdle">KeyNest — Not listening</sys:String>
+    <sys:String x:Key="Tray.TitleListening">KeyNest — Listening</sys:String>
+    <sys:String x:Key="Tray.Enable">Enable</sys:String>
+    <sys:String x:Key="Tray.Disable">Disable</sys:String>
+    <sys:String x:Key="Tray.ShowPanel">Show overlay</sys:String>
+    <sys:String x:Key="Tray.HidePanel">Hide overlay</sys:String>
+    <sys:String x:Key="Tray.Settings">Settings…</sys:String>
+    <sys:String x:Key="Tray.AutoStart">Start with Windows</sys:String>
+    <sys:String x:Key="Tray.Exit">Exit KeyNest</sys:String>
+    <sys:String x:Key="Tray.HookFailed">Unable to enable listening: the system rejected the keyboard hook.</sys:String>
+
+    <!-- ===== Floating window ===== -->
+    <sys:String x:Key="Floating.Title">KeyNest</sys:String>
+    <sys:String x:Key="Floating.Prompt">Press a modifier key to see shortcuts</sys:String>
+    <sys:String x:Key="Floating.PrefixTitleFormat">Shortcuts with {0}</sys:String>
+    <sys:String x:Key="Floating.OverviewTag">All</sys:String>
+    <sys:String x:Key="Floating.OverviewTitle">All shortcuts</sys:String>
+    <sys:String x:Key="Floating.Empty">No matching shortcuts.</sys:String>
+    <sys:String x:Key="Floating.Footer">KeyNest only shows shortcut descriptions and never executes them · Release all modifiers to hide · Esc to close</sys:String>
+    <sys:String x:Key="Floating.NoModifiers">No modifier</sys:String>
+    <sys:String x:Key="Floating.CountFormat">{0} items</sys:String>
+
+    <!-- ===== Settings: tabs ===== -->
+    <sys:String x:Key="Settings.Tab.General">General</sys:String>
+    <sys:String x:Key="Settings.Tab.Theme">Theme</sys:String>
+    <sys:String x:Key="Settings.Tab.Floating">Overlay</sys:String>
+    <sys:String x:Key="Settings.Tab.Triggers">Triggering</sys:String>
+    <sys:String x:Key="Settings.Tab.Language">Language</sys:String>
+    <sys:String x:Key="Settings.Tab.About">About &amp; Licenses</sys:String>
+
+    <!-- ===== Settings: general ===== -->
+    <sys:String x:Key="Settings.General.Title">General</sys:String>
+    <sys:String x:Key="Settings.General.Description">KeyNest only shows shortcut descriptions. It never executes shortcuts and never keeps a key history.</sys:String>
+    <sys:String x:Key="Settings.General.AutoStartTitle">Start with Windows in the tray</sys:String>
+    <sys:String x:Key="Settings.General.AutoStartDescription">Stays in the tray after startup, does not listen by default and never opens the overlay automatically.</sys:String>
+    <sys:String x:Key="Settings.General.SingleInstanceTitle">Single instance</sys:String>
+    <sys:String x:Key="Settings.General.SingleInstanceDescription">Only one KeyNest process is allowed per user session. Opening the shortcut again brings up the settings window.</sys:String>
+    <sys:String x:Key="Settings.General.NoAutoListenTitle">Do not listen on startup</sys:String>
+    <sys:String x:Key="Settings.General.NoAutoListenDescription">To stay quiet and unobtrusive, KeyNest always starts without listening. Enable it from the tray menu when needed.</sys:String>
+    <sys:String x:Key="Settings.General.Footnote">Disabling listening uninstalls the keyboard hook and hides the overlay immediately. Exiting releases the tray icon and ends the process.</sys:String>
+
+    <!-- ===== Settings: theme ===== -->
+    <sys:String x:Key="Settings.Theme.Title">Theme</sys:String>
+    <sys:String x:Key="Settings.Theme.Description">Changes apply immediately and are saved automatically. The default follows the system.</sys:String>
+    <sys:String x:Key="Settings.Theme.SystemTitle">Follow system</sys:String>
+    <sys:String x:Key="Settings.Theme.SystemDescription">Switches in real time with the Windows light and dark mode.</sys:String>
+    <sys:String x:Key="Settings.Theme.LightTitle">Light</sys:String>
+    <sys:String x:Key="Settings.Theme.LightDescription">Bright background, suited to daytime or well-lit environments.</sys:String>
+    <sys:String x:Key="Settings.Theme.DarkTitle">Dark</sys:String>
+    <sys:String x:Key="Settings.Theme.DarkDescription">Dark background, suited to nighttime or low-light environments.</sys:String>
+    <sys:String x:Key="Settings.Theme.HighContrastNote">When Windows high contrast or reduced animations are enabled, KeyNest automatically uses the high-contrast palette and skips transitions.</sys:String>
+
+    <!-- ===== Settings: overlay ===== -->
+    <sys:String x:Key="Settings.Floating.Title">Overlay</sys:String>
+    <sys:String x:Key="Settings.Floating.Description">Rounded, translucent and non-activating. Drag the header to move it. It appears when any modifier is pressed and hides as soon as all modifiers are released.</sys:String>
+    <sys:String x:Key="Settings.Floating.OpacityTitle">Opacity</sys:String>
+    <sys:String x:Key="Settings.Floating.TakeoverWinTitle">Take over single Win</sys:String>
+    <sys:String x:Key="Settings.Floating.TakeoverWinDescription">Off by default. When enabled, pressing Win alone shows the overlay instead of the Start menu; Win with other keys keeps the system behavior.</sys:String>
+    <sys:String x:Key="Settings.Floating.IncludeNoModifierTitle">Include modifier-free shortcuts</sys:String>
+    <sys:String x:Key="Settings.Floating.IncludeNoModifierDescription">Off by default. When enabled, single keys such as F5, Delete and Esc are listed only while the overlay is already open; pressing them alone never opens the overlay.</sys:String>
+    <sys:String x:Key="Settings.Floating.PositionTitle">Overlay position</sys:String>
+    <sys:String x:Key="Settings.Floating.PositionDescription">Shown centered near the bottom of the screen at first; the position is remembered after dragging.</sys:String>
+    <sys:String x:Key="Settings.Floating.ResetPosition">Reset position</sys:String>
+
+    <!-- ===== Settings: triggers ===== -->
+    <sys:String x:Key="Settings.Triggers.Title">Triggering</sys:String>
+    <sys:String x:Key="Settings.Triggers.Description">Any non-empty modifier combination triggers the overlay. The more complete the combination, the more focused the list.</sys:String>
+    <sys:String x:Key="Settings.Triggers.RuleTitle">Matching rule</sys:String>
+    <sys:String x:Key="Settings.Triggers.RuleDescription">Let P be the set of modifiers currently held and K the modifier set of a shortcut. An entry is listed only when (K &amp; P) == P. Groups exactly equal to P come first, followed by groups with one extra modifier, then two.</sys:String>
+    <sys:String x:Key="Settings.Triggers.SingleTitle">Single modifier</sys:String>
+    <sys:String x:Key="Settings.Triggers.SingleDescription">Holding Ctrl lists every shortcut that contains Ctrl; holding Alt lists every shortcut that contains Alt.</sys:String>
+    <sys:String x:Key="Settings.Triggers.PairTitle">Two-modifier combinations</sys:String>
+    <sys:String x:Key="Settings.Triggers.PairDescription">Holding Ctrl+Alt shows only shortcuts that contain both Ctrl and Alt (for example Ctrl+Alt+Delete) and never mixes in Ctrl-only entries.</sys:String>
+    <sys:String x:Key="Settings.Triggers.MultiTitle">Three- and four-modifier combinations</sys:String>
+    <sys:String x:Key="Settings.Triggers.MultiDescription">For example Ctrl+Shift+Esc, Win+Ctrl+D, Win+Shift+S and Win+Ctrl+Shift+B. Entries first satisfy “contains the current set”, then are grouped by the number of extra modifiers.</sys:String>
+    <sys:String x:Key="Settings.Triggers.RealtimeTitle">Narrowing and expanding live</sys:String>
+    <sys:String x:Key="Settings.Triggers.RealtimeDescription">After opening the Ctrl list, pressing Alt narrows it to entries that contain both Ctrl and Alt; releasing Alt restores the Ctrl list. Releasing all modifiers hides the overlay immediately.</sys:String>
+    <sys:String x:Key="Settings.Triggers.NoModifierNote">Modifier-free single keys (F1–F12, Delete, Esc and so on) never open the overlay by themselves, to avoid interrupting typing. Enable the supplementary list under Overlay if needed.</sys:String>
+
+    <!-- ===== Settings: language ===== -->
+    <sys:String x:Key="Settings.Language.Title">Language</sys:String>
+    <sys:String x:Key="Settings.Language.Description">Choose the interface language. It applies immediately and is saved automatically. Simplified Chinese is the default.</sys:String>
+    <sys:String x:Key="Settings.Language.ChineseTitle">简体中文</sys:String>
+    <sys:String x:Key="Settings.Language.ChineseDescription">使用简体中文界面与快捷键说明。</sys:String>
+    <sys:String x:Key="Settings.Language.EnglishTitle">English</sys:String>
+    <sys:String x:Key="Settings.Language.EnglishDescription">Use the English interface and shortcut descriptions.</sys:String>
+    <sys:String x:Key="Settings.Language.Note">Language and theme are independent. Switching the language never changes the theme and never reloads the shortcut matching logic.</sys:String>
+
+    <!-- ===== Settings: about ===== -->
+    <sys:String x:Key="Settings.About.Title">About &amp; Licenses</sys:String>
+    <sys:String x:Key="Settings.About.VersionFormat">Version {0}</sys:String>
+    <sys:String x:Key="Settings.About.PrivacyTitle">Privacy</sys:String>
+    <sys:String x:Key="Settings.About.PrivacyDescription">KeyNest does not connect to the internet or any server, uploads no data, keeps no key history and stores no typed content. Only the interface language, theme, overlay position and opacity, trigger and display options, and the auto-start flag are saved locally.</sys:String>
+    <sys:String x:Key="Settings.About.AuthorTitle">Author and project</sys:String>
+    <sys:String x:Key="Settings.About.AuthorLabel">Author:&#x20;</sys:String>
+    <sys:String x:Key="Settings.About.ProjectLabel">Repository:&#x20;</sys:String>
+    <sys:String x:Key="Settings.About.LicensesTitle">Third-party components and licenses</sys:String>
+    <sys:String x:Key="Settings.About.OpenLicenseList">Open list</sys:String>
+    <sys:String x:Key="Settings.About.DataTitle">Data and uninstall</sys:String>
+    <sys:String x:Key="Settings.About.OpenDataFolder">Open data folder</sys:String>
+    <sys:String x:Key="Settings.About.Uninstall">Uninstall KeyNest</sys:String>
+    <sys:String x:Key="Settings.About.LicenseSummary">Third-party components (runtime)&#10;· .NET 8 / WPF / Windows Forms — MIT — runtime framework published by Microsoft&#10;· Windows public APIs (user32.dll / dwmapi.dll / kernel32.dll) — system components — keyboard hook, window styles, DWM rounded corners&#10;&#10;This program contains no GPL/AGPL components, no networking and no telemetry, and it never records key history or typed content.&#10;It uses the built-in Segoe UI / Segoe UI Variable fonts and bundles no third-party fonts.&#10;The icon is an original drawing and uses no Windows system icons or commercial icon libraries.&#10;See THIRD-PARTY-NOTICES.txt in the installation folder for the complete list.</sys:String>
+
+    <!-- ===== Settings: dialogs ===== -->
+    <sys:String x:Key="Settings.Error.OpenDataFolderFormat">Unable to open the data folder: {0}</sys:String>
+    <sys:String x:Key="Settings.Error.LicenseMissing">Third-party license file not found.</sys:String>
+    <sys:String x:Key="Settings.Error.OpenLicenseFormat">Unable to open the license file: {0}</sys:String>
+    <sys:String x:Key="Settings.Error.OpenLinkFormat">Unable to open the link: {0}</sys:String>
+    <sys:String x:Key="Settings.Uninstall.Missing">Uninstaller not found. Uninstall KeyNest from Windows Settings → Apps → Installed apps.</sys:String>
+    <sys:String x:Key="Settings.Uninstall.Confirm">The uninstaller will start and KeyNest will exit first. Continue?</sys:String>
+    <sys:String x:Key="Settings.Uninstall.StartFailedFormat">Unable to start the uninstaller: {0}</sys:String>
+
+    <!-- ===== Installer ===== -->
+    <sys:String x:Key="Installer.WindowTitle">KeyNest Setup</sys:String>
+    <sys:String x:Key="Installer.StepFormat">Step {0} of {1}</sys:String>
+    <sys:String x:Key="Installer.ContinueError">An error occurred while continuing the installation:&#10;{0}</sys:String>
+    <sys:String x:Key="Installer.UnexpectedError">The installer encountered an unhandled error:&#10;{0}</sys:String>
+    <sys:String x:Key="Installer.CancelBusyConfirm">The installation is in progress. Cancel and close anyway? Some files may already have been written.</sys:String>
+
+    <sys:String x:Key="Installer.Welcome.Title">Welcome to KeyNest</sys:String>
+    <sys:String x:Key="Installer.Welcome.Subtitle">Every shortcut, right where you need it.</sys:String>
+    <sys:String x:Key="Installer.Welcome.Description">KeyNest is a fully local Windows shortcut reference: hold any modifier combination (Ctrl, Shift, Alt, Win and their combinations) to see the available shortcuts.</sys:String>
+    <sys:String x:Key="Installer.Welcome.LanguageTitle">Setup language</sys:String>
+    <sys:String x:Key="Installer.Welcome.LanguageDescription">Choose the language used by the installer and the KeyNest interface. You can change it later in Settings.</sys:String>
+    <sys:String x:Key="Installer.Welcome.Feature1">Fully offline: no networking, no data upload and no telemetry.</sys:String>
+    <sys:String x:Key="Installer.Welcome.Feature2">Shows only, never executes: no key history, no stored input and no interception of system shortcuts.</sys:String>
+    <sys:String x:Key="Installer.Welcome.Feature3">Stays in the tray after installation and does not listen by default. Enable or exit at any time from the tray menu.</sys:String>
+    <sys:String x:Key="Installer.Welcome.Footnote">This installer downloads nothing; all files come from the package itself.</sys:String>
+
+    <sys:String x:Key="Installer.License.Title">License and privacy</sys:String>
+    <sys:String x:Key="Installer.License.Description">Please read the following before continuing. KeyNest does not connect to the internet and collects no personal information.</sys:String>
+    <sys:String x:Key="Installer.License.Section1Title">1. License</sys:String>
+    <sys:String x:Key="Installer.License.Section1Body">This software is provided free of charge for personal use on Windows devices. You may copy and distribute the unmodified original installer, but you may not remove the product name or copyright notices, and you may not use the software for illegal purposes.</sys:String>
+    <sys:String x:Key="Installer.License.Section2Title">2. Functional boundaries</sys:String>
+    <sys:String x:Key="Installer.License.Section2Body">KeyNest only displays built-in shortcut descriptions. It never executes shortcuts, forwards keystrokes or changes system settings. System keys are not intercepted by default, so Win+R, Win+D and other system shortcuts keep their normal behavior.</sys:String>
+    <sys:String x:Key="Installer.License.Section3Title">3. Privacy</sys:String>
+    <sys:String x:Key="Installer.License.Section3Body">KeyNest does not connect to the internet or any server, uploads no data, keeps no key history and stores no typed content. Only settings such as the interface language, theme, overlay position and opacity, trigger and display options, and the auto-start flag are saved locally under %APPDATA%\KeyNest.</sys:String>
+    <sys:String x:Key="Installer.License.Section4Title">4. Open source and third-party components</sys:String>
+    <sys:String x:Key="Installer.License.Section4Body">KeyNest uses only the .NET 8 runtime and public Windows APIs, with no GPL/AGPL components. The third-party notices are installed as THIRD-PARTY-NOTICES.txt in the installation folder and can be viewed at any time.</sys:String>
+    <sys:String x:Key="Installer.License.Section5Title">5. Disclaimer</sys:String>
+    <sys:String x:Key="Installer.License.Section5Body">Shortcut descriptions reflect official Windows behavior and may differ between system versions. This software is provided “as is”, without liability for any loss caused by using or being unable to use it.</sys:String>
+    <sys:String x:Key="Installer.License.Accept">I accept the license and privacy notice</sys:String>
+    <sys:String x:Key="Installer.License.AcceptHint">You must accept before continuing.</sys:String>
+
+    <sys:String x:Key="Installer.Directory.Title">Install location</sys:String>
+    <sys:String x:Key="Installer.Directory.Description">Choose the installation scope and target folder. The default folder has already been validated and can be used directly.</sys:String>
+    <sys:String x:Key="Installer.Directory.ScopeTitle">Installation scope</sys:String>
+    <sys:String x:Key="Installer.Directory.PerUserTitle">Install for the current user only (recommended)</sys:String>
+    <sys:String x:Key="Installer.Directory.PerUserDescription">Installs to %LocalAppData%\Programs\KeyNest by default; administrator rights are not required.</sys:String>
+    <sys:String x:Key="Installer.Directory.PerMachineTitle">Install for all users</sys:String>
+    <sys:String x:Key="Installer.Directory.PerMachineDescription">Installs to %ProgramFiles%\KeyNest by default; administrator rights are required.</sys:String>
+    <sys:String x:Key="Installer.Directory.LocationTitle">Folder</sys:String>
+    <sys:String x:Key="Installer.Directory.Footnote">This folder holds the program files and the uninstaller. User settings always live in %APPDATA%\KeyNest, independent of the installation folder.</sys:String>
+    <sys:String x:Key="Installer.Directory.BrowseTitle">Choose the KeyNest installation folder</sys:String>
+    <sys:String x:Key="Installer.Directory.ScopeNotePerUser">Installs only in the current user's folder; no administrator rights required.</sys:String>
+    <sys:String x:Key="Installer.Directory.ScopeNotePerMachine">Installs for all users; administrator rights required.</sys:String>
+    <sys:String x:Key="Installer.Directory.PreviousVersionFormat">KeyNest {0} is already installed. Continuing will overwrite the program files; your settings are preserved.</sys:String>
+
+    <sys:String x:Key="Installer.Options.Title">Installation options</sys:String>
+    <sys:String x:Key="Installer.Options.Description">Choose the shortcuts and startup behavior to create. All of these can be changed later in KeyNest Settings.</sys:String>
+    <sys:String x:Key="Installer.Options.DesktopTitle">Create a desktop shortcut</sys:String>
+    <sys:String x:Key="Installer.Options.DesktopDescription">Places a KeyNest shortcut on the desktop.</sys:String>
+    <sys:String x:Key="Installer.Options.StartMenuTitle">Create Start menu entries</sys:String>
+    <sys:String x:Key="Installer.Options.StartMenuDescription">Adds the program and uninstall entries to the Start menu.</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartTitle">Start with Windows in the tray</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartDescription">Off by default. Even when enabled, KeyNest still starts without listening and only stays in the tray.</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartNoteTitle">About auto-start and listening</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartNote">Auto-start only writes the current user's Run value named KeyNest; it never registers a system service. Listening is controlled entirely by you from the tray menu.</sys:String>
+    <sys:String x:Key="Installer.Options.Footnote">You can adjust everything later under Tray menu → Settings. The uninstaller lets you choose whether to keep your settings.</sys:String>
+
+    <sys:String x:Key="Installer.Progress.Title">Installing</sys:String>
+    <sys:String x:Key="Installer.Progress.Description">Please wait. The installation happens entirely on this machine and downloads nothing.</sys:String>
+    <sys:String x:Key="Installer.Progress.Preparing">Preparing to install.</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationTitle">Administrator rights required</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationDescription">You selected “Install for all users”. Restart the installer as administrator and select this option again.</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationButton">Restart as administrator</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationFailed">Unable to restart as administrator. Right-click the installer and choose “Run as administrator”.</sys:String>
+    <sys:String x:Key="Installer.Progress.RetryTitle">Installation did not finish</sys:String>
+    <sys:String x:Key="Installer.Progress.RetryDescription">Check the free disk space and folder permissions and try again, or cancel and choose another folder.</sys:String>
+    <sys:String x:Key="Installer.Progress.Footnote">After installation you can adjust the language, theme, overlay and auto-start in KeyNest Settings.</sys:String>
+    <sys:String x:Key="Installer.Progress.NeedElevationStatus">Per-machine installation requires administrator rights. Click the button below to restart the installer.</sys:String>
+    <sys:String x:Key="Installer.Progress.DoneStatus">Installation complete. Click “Next” to finish.</sys:String>
+    <sys:String x:Key="Installer.Progress.FailedStatusFormat">Installation failed: {0}</sys:String>
+
+    <sys:String x:Key="Installer.Finish.Title">Installation complete</sys:String>
+    <sys:String x:Key="Installer.Finish.Description">KeyNest is ready. Select the option below to launch it and enable listening right after installation.</sys:String>
+    <sys:String x:Key="Installer.Finish.InstalledTitle">KeyNest has been installed</sys:String>
+    <sys:String x:Key="Installer.Finish.RunNowTitle">Launch KeyNest and enable listening</sys:String>
+    <sys:String x:Key="Installer.Finish.RunNowDescription">It stays in the tray and starts listening; you can disable it at any time from the tray menu.</sys:String>
+    <sys:String x:Key="Installer.Finish.NextTitle">What to do next</sys:String>
+    <sys:String x:Key="Installer.Finish.NextDescription">Choose “Enable” in the tray menu, then hold Ctrl, Shift, Alt, Win or any combination to see the shortcut descriptions. KeyNest only shows, never executes.</sys:String>
+    <sys:String x:Key="Installer.Finish.Footnote">Your settings live in %APPDATA%\KeyNest and can be kept when uninstalling. Third-party notices are in THIRD-PARTY-NOTICES.txt in the installation folder.</sys:String>
+
+    <sys:String x:Key="Installer.Validation.Empty">Please enter an installation folder.</sys:String>
+    <sys:String x:Key="Installer.Validation.InvalidChars">The folder contains invalid characters.</sys:String>
+    <sys:String x:Key="Installer.Validation.NotRooted">Enter a full path, for example D:\Apps\KeyNest.</sys:String>
+    <sys:String x:Key="Installer.Validation.TooLong">The path is too long. Choose a shorter one.</sys:String>
+    <sys:String x:Key="Installer.Validation.DriveMissing">The target drive does not exist.</sys:String>
+    <sys:String x:Key="Installer.Validation.DriveRoot">You cannot install directly to a drive root.</sys:String>
+    <sys:String x:Key="Installer.Validation.Protected">You cannot install to a protected system folder. Choose another location.</sys:String>
+    <sys:String x:Key="Installer.Validation.NoSpace">Not enough free disk space. At least 200 MB are required.</sys:String>
+    <sys:String x:Key="Installer.Validation.NoPermission">No write permission. Choose another folder or run the installer as administrator.</sys:String>
+    <sys:String x:Key="Installer.Validation.Ok">The folder is available.</sys:String>
+    <sys:String x:Key="Installer.Validation.InvalidFormat">Invalid path: {0}</sys:String>
+
+    <sys:String x:Key="Installer.Error.PayloadMissing">The package is missing its built-in program files. Please obtain a complete installer.</sys:String>
+    <sys:String x:Key="Installer.Error.InvalidEntryFormat">The package contains an invalid path: {0}</sys:String>
+    <sys:String x:Key="Installer.Error.UninstallWrite">Unable to write the uninstall information, possibly due to insufficient permissions.</sys:String>
+    <sys:String x:Key="Installer.Error.AutoStartWrite">Unable to write the auto-start entry.</sys:String>
+    <sys:String x:Key="Installer.Progress.Validating">Validating the installation folder…</sys:String>
+    <sys:String x:Key="Installer.Progress.CreatingDirectory">Creating the installation folder…</sys:String>
+    <sys:String x:Key="Installer.Progress.Extracting">Extracting program files…</sys:String>
+    <sys:String x:Key="Installer.Progress.ExtractingFormat">Extracting program files… {0}%</sys:String>
+    <sys:String x:Key="Installer.Progress.Shortcuts">Creating shortcuts…</sys:String>
+    <sys:String x:Key="Installer.Progress.UninstallEntry">Writing uninstall information…</sys:String>
+    <sys:String x:Key="Installer.Progress.AutoStart">Configuring auto-start…</sys:String>
+    <sys:String x:Key="Installer.Progress.Completed">Installation complete.</sys:String>
+    <sys:String x:Key="Installer.Shortcut.Uninstall">Uninstall KeyNest</sys:String>
+
+    <!-- ===== Uninstaller ===== -->
+    <sys:String x:Key="Uninstaller.WindowTitle">Uninstall KeyNest</sys:String>
+    <sys:String x:Key="Uninstaller.Heading">Uninstall KeyNest</sys:String>
+    <sys:String x:Key="Uninstaller.Description">This removes the program files, shortcuts, auto-start entry and uninstall information.</sys:String>
+    <sys:String x:Key="Uninstaller.KeepConfigTitle">Keep user settings</sys:String>
+    <sys:String x:Key="Uninstaller.KeepConfigDescription">Keeps the interface language, theme, overlay position and display options under %APPDATA%\KeyNest.</sys:String>
+    <sys:String x:Key="Uninstaller.InstallDirectoryLabel">Installation folder</sys:String>
+    <sys:String x:Key="Uninstaller.ProgressTitle">Uninstalling</sys:String>
+    <sys:String x:Key="Uninstaller.Preparing">Preparing…</sys:String>
+    <sys:String x:Key="Uninstaller.Cancel">Cancel</sys:String>
+    <sys:String x:Key="Uninstaller.Uninstall">Uninstall</sys:String>
+    <sys:String x:Key="Uninstaller.Confirm">Uninstall KeyNest? The program will close when finished.</sys:String>
+    <sys:String x:Key="Uninstaller.Done">KeyNest has been uninstalled. The program folder will be cleaned up in a few seconds.</sys:String>
+    <sys:String x:Key="Uninstaller.ErrorFormat">An error occurred during uninstallation:&#10;{0}</sys:String>
+    <sys:String x:Key="Uninstaller.FailedStatusFormat">Uninstallation failed: {0}</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Stopping">Closing the running KeyNest…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Shortcuts">Removing shortcuts…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.AutoStart">Removing the auto-start entry…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.UninstallInfo">Removing uninstall information…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Config">Removing user settings…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Files">Removing program files…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Done">Uninstallation complete.</sys:String>
+
+</ResourceDictionary>

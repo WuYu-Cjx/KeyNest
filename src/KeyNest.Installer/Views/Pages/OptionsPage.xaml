@@ -1,0 +1,90 @@
+<pages:WizardPage x:Class="KeyNest.Installer.Views.Pages.OptionsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:pages="clr-namespace:KeyNest.Installer.Views.Pages"
+             xmlns:ui="clr-namespace:KeyNest.UI.Controls;assembly=KeyNest.UI"
+             FontFamily="{DynamicResource Font.Ui}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="8,0,8,0">
+            <TextBlock Text="{DynamicResource Installer.Options.Title}" Style="{StaticResource Text.Display}" />
+            <TextBlock Text="{DynamicResource Installer.Options.Description}"
+                       Style="{StaticResource Text.Caption}"
+                       Margin="0,4,0,14" />
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Margin="8,0,8,8">
+                <Border Style="{StaticResource Card}">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <TextBlock Text="{DynamicResource Installer.Options.DesktopTitle}" Style="{StaticResource Text.Body}" FontWeight="SemiBold" />
+                                <TextBlock Text="{DynamicResource Installer.Options.DesktopDescription}"
+                                           Style="{StaticResource Text.Caption}" Margin="0,2,12,0" />
+                            </StackPanel>
+                            <ui:ToggleSwitch Grid.Column="1"
+                                             IsChecked="{Binding CreateDesktopShortcut, Mode=TwoWay}"
+                                             VerticalAlignment="Center" />
+                        </Grid>
+
+                        <Border Style="{StaticResource Divider}" Margin="0,14" />
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <TextBlock Text="{DynamicResource Installer.Options.StartMenuTitle}" Style="{StaticResource Text.Body}" FontWeight="SemiBold" />
+                                <TextBlock Text="{DynamicResource Installer.Options.StartMenuDescription}"
+                                           Style="{StaticResource Text.Caption}" Margin="0,2,12,0" />
+                            </StackPanel>
+                            <ui:ToggleSwitch Grid.Column="1"
+                                             IsChecked="{Binding CreateStartMenuShortcut, Mode=TwoWay}"
+                                             VerticalAlignment="Center" />
+                        </Grid>
+
+                        <Border Style="{StaticResource Divider}" Margin="0,14" />
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <TextBlock Text="{DynamicResource Installer.Options.AutoStartTitle}" Style="{StaticResource Text.Body}" FontWeight="SemiBold" />
+                                <TextBlock Text="{DynamicResource Installer.Options.AutoStartDescription}"
+                                           Style="{StaticResource Text.Caption}" Margin="0,2,12,0" />
+                            </StackPanel>
+                            <ui:ToggleSwitch Grid.Column="1"
+                                             IsChecked="{Binding EnableAutoStart, Mode=TwoWay}"
+                                             VerticalAlignment="Center" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource Card.Subtle}" Margin="0,14,0,0">
+                    <StackPanel>
+                        <TextBlock Text="{DynamicResource Installer.Options.AutoStartNoteTitle}" Style="{StaticResource Text.Body}" FontWeight="SemiBold" />
+                        <TextBlock Style="{StaticResource Text.Caption}" Margin="0,4,0,0"
+                                   Text="{DynamicResource Installer.Options.AutoStartNote}" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource Card.Subtle}" Margin="0,12,0,0">
+                    <TextBlock Style="{StaticResource Text.Caption}"
+                               Text="{DynamicResource Installer.Options.Footnote}" />
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</pages:WizardPage>

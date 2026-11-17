@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>KeyNest.App</RootNamespace>
+    <AssemblyName>KeyNest.App</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\KeyNest.ico</ApplicationIcon>
+    <Description>键巢 KeyNest 主程序：托盘常驻的 Windows 快捷键提示工具。</Description>
+    <TieredPGO>true</TieredPGO>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KeyNest.Core\KeyNest.Core.csproj" />
+    <ProjectReference Include="..\KeyNest.UI\KeyNest.UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\Data\shortcuts.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Assets\Data\shortcuts.json" LogicalName="KeyNest.App.shortcuts.json" />
+    <EmbeddedResource Include="Assets\KeyNest.ico" LogicalName="KeyNest.App.KeyNest.ico" />
+  </ItemGroup>
+
+</Project>

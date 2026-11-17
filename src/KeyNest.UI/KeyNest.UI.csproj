@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>KeyNest.UI</RootNamespace>
+    <AssemblyName>KeyNest.UI</AssemblyName>
+    <Description>键巢 KeyNest 设计系统：设计令牌、主题字典与通用控件。</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KeyNest.Core\KeyNest.Core.csproj" />
+  </ItemGroup>
+
+</Project>

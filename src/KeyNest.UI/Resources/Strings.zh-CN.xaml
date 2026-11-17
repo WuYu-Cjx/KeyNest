@@ -1,0 +1,267 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- ===== 通用 ===== -->
+    <sys:String x:Key="Common.Next">下一步</sys:String>
+    <sys:String x:Key="Common.Back">上一步</sys:String>
+    <sys:String x:Key="Common.Cancel">取消</sys:String>
+    <sys:String x:Key="Common.Close">关闭</sys:String>
+    <sys:String x:Key="Common.Finish">完成</sys:String>
+    <sys:String x:Key="Common.Browse">浏览…</sys:String>
+    <sys:String x:Key="Common.Retry">重试安装</sys:String>
+
+    <!-- ===== 应用 ===== -->
+    <sys:String x:Key="App.ProductName">键巢 KeyNest</sys:String>
+    <sys:String x:Key="App.ProductFullName">键巢（KeyNest）</sys:String>
+    <sys:String x:Key="App.Tagline">按下即见，快捷键归巢。</sys:String>
+    <sys:String x:Key="App.ShortTagline">键巢 KeyNest · 按下即见，快捷键归巢。</sys:String>
+    <sys:String x:Key="App.Settings">设置</sys:String>
+    <sys:String x:Key="App.SettingsWindowTitle">键巢 KeyNest 设置</sys:String>
+    <sys:String x:Key="App.Minimize">最小化</sys:String>
+    <sys:String x:Key="App.Close">关闭</sys:String>
+
+    <!-- ===== 托盘 ===== -->
+    <sys:String x:Key="Tray.TitleIdle">键巢 KeyNest — 未监听</sys:String>
+    <sys:String x:Key="Tray.TitleListening">键巢 KeyNest — 监听中</sys:String>
+    <sys:String x:Key="Tray.Enable">启用</sys:String>
+    <sys:String x:Key="Tray.Disable">停用</sys:String>
+    <sys:String x:Key="Tray.ShowPanel">显示悬浮窗</sys:String>
+    <sys:String x:Key="Tray.HidePanel">隐藏悬浮窗</sys:String>
+    <sys:String x:Key="Tray.Settings">设置…</sys:String>
+    <sys:String x:Key="Tray.AutoStart">开机自动启动</sys:String>
+    <sys:String x:Key="Tray.Exit">退出键巢</sys:String>
+    <sys:String x:Key="Tray.HookFailed">无法启用监听：系统拒绝了键盘钩子。</sys:String>
+
+    <!-- ===== 悬浮窗 ===== -->
+    <sys:String x:Key="Floating.Title">键巢 KeyNest</sys:String>
+    <sys:String x:Key="Floating.Prompt">按下修饰键查看快捷键</sys:String>
+    <sys:String x:Key="Floating.PrefixTitleFormat">{0} 相关快捷键</sys:String>
+    <sys:String x:Key="Floating.OverviewTag">全部</sys:String>
+    <sys:String x:Key="Floating.OverviewTitle">全部快捷键</sys:String>
+    <sys:String x:Key="Floating.Empty">当前没有匹配的快捷键说明。</sys:String>
+    <sys:String x:Key="Floating.Footer">键巢仅展示快捷键说明，不执行操作 · 松开全部修饰键立即隐藏 · Esc 关闭</sys:String>
+    <sys:String x:Key="Floating.NoModifiers">无修饰键</sys:String>
+    <sys:String x:Key="Floating.CountFormat">{0} 项</sys:String>
+
+    <!-- ===== 设置：页签 ===== -->
+    <sys:String x:Key="Settings.Tab.General">常规</sys:String>
+    <sys:String x:Key="Settings.Tab.Theme">主题</sys:String>
+    <sys:String x:Key="Settings.Tab.Floating">悬浮窗</sys:String>
+    <sys:String x:Key="Settings.Tab.Triggers">触发说明</sys:String>
+    <sys:String x:Key="Settings.Tab.Language">语言</sys:String>
+    <sys:String x:Key="Settings.Tab.About">关于与许可</sys:String>
+
+    <!-- ===== 设置：常规 ===== -->
+    <sys:String x:Key="Settings.General.Title">常规</sys:String>
+    <sys:String x:Key="Settings.General.Description">键巢只提示快捷键，不执行快捷键，也不记录按键历史。</sys:String>
+    <sys:String x:Key="Settings.General.AutoStartTitle">开机自动启动到托盘</sys:String>
+    <sys:String x:Key="Settings.General.AutoStartDescription">启动后仅常驻托盘，默认不监听，不会自动弹出悬浮窗。</sys:String>
+    <sys:String x:Key="Settings.General.SingleInstanceTitle">单实例</sys:String>
+    <sys:String x:Key="Settings.General.SingleInstanceDescription">同一用户会话只允许一个键巢进程，再次打开快捷方式会直接唤出设置窗口。</sys:String>
+    <sys:String x:Key="Settings.General.NoAutoListenTitle">启动时不自动监听</sys:String>
+    <sys:String x:Key="Settings.General.NoAutoListenDescription">为保持“只提示、不打扰”，每次启动都固定为未监听状态；需要时请从托盘菜单启用。</sys:String>
+    <sys:String x:Key="Settings.General.Footnote">停用监听会立即卸载键盘钩子并隐藏悬浮窗；完全退出会释放托盘图标并结束进程。</sys:String>
+
+    <!-- ===== 设置：主题 ===== -->
+    <sys:String x:Key="Settings.Theme.Title">主题</sys:String>
+    <sys:String x:Key="Settings.Theme.Description">选择后立即生效并自动保存；默认跟随系统。</sys:String>
+    <sys:String x:Key="Settings.Theme.SystemTitle">跟随系统</sys:String>
+    <sys:String x:Key="Settings.Theme.SystemDescription">随 Windows 深浅色设置实时切换。</sys:String>
+    <sys:String x:Key="Settings.Theme.LightTitle">浅色</sys:String>
+    <sys:String x:Key="Settings.Theme.LightDescription">明亮背景，适合白天或高亮环境。</sys:String>
+    <sys:String x:Key="Settings.Theme.DarkTitle">深色</sys:String>
+    <sys:String x:Key="Settings.Theme.DarkDescription">深色背景，适合夜间或低光环境。</sys:String>
+    <sys:String x:Key="Settings.Theme.HighContrastNote">系统开启高对比度或“减少动画”时，键巢会自动使用高对比度配色并跳过过渡动画。</sys:String>
+
+    <!-- ===== 设置：悬浮窗 ===== -->
+    <sys:String x:Key="Settings.Floating.Title">悬浮窗</sys:String>
+    <sys:String x:Key="Settings.Floating.Description">圆角、半透明、不抢焦点；拖动标题区域即可移动。按下任意修饰键显示，松开全部修饰键立即隐藏。</sys:String>
+    <sys:String x:Key="Settings.Floating.OpacityTitle">不透明度</sys:String>
+    <sys:String x:Key="Settings.Floating.TakeoverWinTitle">接管单按 Win</sys:String>
+    <sys:String x:Key="Settings.Floating.TakeoverWinDescription">默认关闭。开启后单按 Win 不会打开开始菜单，只显示悬浮窗；Win+其它键仍按系统行为处理。</sys:String>
+    <sys:String x:Key="Settings.Floating.IncludeNoModifierTitle">包含无修饰键单键快捷键</sys:String>
+    <sys:String x:Key="Settings.Floating.IncludeNoModifierDescription">默认关闭。开启后仅在悬浮窗已展开时补充显示 F5、Delete、Esc 等单键说明，不会因单独按键自动弹窗。</sys:String>
+    <sys:String x:Key="Settings.Floating.PositionTitle">悬浮窗位置</sys:String>
+    <sys:String x:Key="Settings.Floating.PositionDescription">首次显示在屏幕底部居中；拖动后自动记住位置。</sys:String>
+    <sys:String x:Key="Settings.Floating.ResetPosition">重置位置</sys:String>
+
+    <!-- ===== 设置：触发说明 ===== -->
+    <sys:String x:Key="Settings.Triggers.Title">触发说明</sys:String>
+    <sys:String x:Key="Settings.Triggers.Description">任意非空修饰键组合都会触发；组合越完整，列表越聚焦。</sys:String>
+    <sys:String x:Key="Settings.Triggers.RuleTitle">匹配规则</sys:String>
+    <sys:String x:Key="Settings.Triggers.RuleDescription">当前按下的修饰键集合为 P，快捷键修饰键集合为 K，仅当 (K &amp; P) == P 时进入候选列表。完全等于 P 的分组排在最前，其次是多一个修饰键、再多一个。</sys:String>
+    <sys:String x:Key="Settings.Triggers.SingleTitle">单按修饰键</sys:String>
+    <sys:String x:Key="Settings.Triggers.SingleDescription">例如按住 Ctrl 时，列出所有包含 Ctrl 的快捷键；按住 Alt 时列出所有包含 Alt 的快捷键。</sys:String>
+    <sys:String x:Key="Settings.Triggers.PairTitle">两两组合</sys:String>
+    <sys:String x:Key="Settings.Triggers.PairDescription">例如按住 Ctrl+Alt 时，只显示同时包含 Ctrl 与 Alt 的快捷键（如 Ctrl+Alt+Delete 的说明），不会混入仅含 Ctrl 的条目。</sys:String>
+    <sys:String x:Key="Settings.Triggers.MultiTitle">三键与四键组合</sys:String>
+    <sys:String x:Key="Settings.Triggers.MultiDescription">例如 Ctrl+Shift+Esc、Win+Ctrl+D、Win+Shift+S、Win+Ctrl+Shift+B，先满足“包含当前集合”，再按额外修饰键数量分组。</sys:String>
+    <sys:String x:Key="Settings.Triggers.RealtimeTitle">实时收窄与扩展</sys:String>
+    <sys:String x:Key="Settings.Triggers.RealtimeDescription">按住 Ctrl 展开列表后，再按 Alt 会收窄为同时包含 Ctrl 与 Alt 的条目；松开 Alt 后恢复为 Ctrl 列表。松开全部修饰键后立即隐藏。</sys:String>
+    <sys:String x:Key="Settings.Triggers.NoModifierNote">无修饰键单键（F1–F12、Delete、Esc 等）默认不会单独触发悬浮窗，避免打字时频繁打扰；如需查看，可在“悬浮窗”设置中开启补充显示。</sys:String>
+
+    <!-- ===== 设置：语言 ===== -->
+    <sys:String x:Key="Settings.Language.Title">语言</sys:String>
+    <sys:String x:Key="Settings.Language.Description">选择界面语言，立即生效并自动保存；默认简体中文。</sys:String>
+    <sys:String x:Key="Settings.Language.ChineseTitle">简体中文</sys:String>
+    <sys:String x:Key="Settings.Language.ChineseDescription">使用简体中文界面与快捷键说明。</sys:String>
+    <sys:String x:Key="Settings.Language.EnglishTitle">English</sys:String>
+    <sys:String x:Key="Settings.Language.EnglishDescription">Use the English interface and shortcut descriptions.</sys:String>
+    <sys:String x:Key="Settings.Language.Note">语言与主题相互独立，切换语言不会改变主题，也不会重新加载快捷键匹配逻辑。</sys:String>
+
+    <!-- ===== 设置：关于 ===== -->
+    <sys:String x:Key="Settings.About.Title">关于与许可</sys:String>
+    <sys:String x:Key="Settings.About.VersionFormat">版本 {0}</sys:String>
+    <sys:String x:Key="Settings.About.PrivacyTitle">隐私说明</sys:String>
+    <sys:String x:Key="Settings.About.PrivacyDescription">键巢不联网、不连接服务器、不上传任何数据，不记录按键历史，也不保存输入内容。本机仅保存界面语言、主题、悬浮窗位置与透明度、触发与显示选项、开机自启开关等配置。</sys:String>
+    <sys:String x:Key="Settings.About.AuthorTitle">作者与项目</sys:String>
+    <sys:String x:Key="Settings.About.AuthorLabel">作者：</sys:String>
+    <sys:String x:Key="Settings.About.ProjectLabel">项目仓库：</sys:String>
+    <sys:String x:Key="Settings.About.LicensesTitle">第三方组件与许可证</sys:String>
+    <sys:String x:Key="Settings.About.OpenLicenseList">打开清单</sys:String>
+    <sys:String x:Key="Settings.About.DataTitle">数据与卸载</sys:String>
+    <sys:String x:Key="Settings.About.OpenDataFolder">打开配置目录</sys:String>
+    <sys:String x:Key="Settings.About.Uninstall">卸载键巢</sys:String>
+    <sys:String x:Key="Settings.About.LicenseSummary">第三方组件清单（运行时）&#10;· .NET 8 / WPF / Windows Forms — MIT — 运行框架，微软官方发布&#10;· Windows 公开 API（user32.dll / dwmapi.dll / kernel32.dll）— 系统组件 — 键盘钩子、窗口样式、DWM 圆角&#10;&#10;本程序不包含任何 GPL/AGPL 组件，不联网、不引入遥测，不记录按键历史与输入内容。&#10;字体使用系统自带 Segoe UI / Segoe UI Variable，不打包第三方字体。&#10;图标为原创绘制，未使用 Windows 系统图标或任何商业图标库。&#10;完整清单见安装目录下的 THIRD-PARTY-NOTICES.txt。</sys:String>
+
+    <!-- ===== 设置：对话框 ===== -->
+    <sys:String x:Key="Settings.Error.OpenDataFolderFormat">无法打开配置目录：{0}</sys:String>
+    <sys:String x:Key="Settings.Error.LicenseMissing">未找到第三方许可证文件。</sys:String>
+    <sys:String x:Key="Settings.Error.OpenLicenseFormat">无法打开许可证文件：{0}</sys:String>
+    <sys:String x:Key="Settings.Error.OpenLinkFormat">无法打开链接：{0}</sys:String>
+    <sys:String x:Key="Settings.Uninstall.Missing">未找到卸载程序。请通过“Windows 设置 → 应用 → 已安装的应用”卸载键巢。</sys:String>
+    <sys:String x:Key="Settings.Uninstall.Confirm">将要启动卸载程序，键巢会先退出。是否继续？</sys:String>
+    <sys:String x:Key="Settings.Uninstall.StartFailedFormat">无法启动卸载程序：{0}</sys:String>
+
+    <!-- ===== 安装程序 ===== -->
+    <sys:String x:Key="Installer.WindowTitle">键巢（KeyNest）安装程序</sys:String>
+    <sys:String x:Key="Installer.StepFormat">第 {0} 步 / 共 {1} 步</sys:String>
+    <sys:String x:Key="Installer.ContinueError">继续安装时发生错误：&#10;{0}</sys:String>
+    <sys:String x:Key="Installer.UnexpectedError">安装程序遇到未处理的错误：&#10;{0}</sys:String>
+    <sys:String x:Key="Installer.CancelBusyConfirm">安装正在进行，确定要取消并关闭吗？部分文件可能已经写入。</sys:String>
+
+    <sys:String x:Key="Installer.Welcome.Title">欢迎安装 键巢 KeyNest</sys:String>
+    <sys:String x:Key="Installer.Welcome.Subtitle">按下即见，快捷键归巢。</sys:String>
+    <sys:String x:Key="Installer.Welcome.Description">键巢是一个完全本地的 Windows 快捷键提示工具：按下任意修饰键组合（Ctrl、Shift、Alt、Win 及其组合），即可看到可用的快捷键说明。</sys:String>
+    <sys:String x:Key="Installer.Welcome.LanguageTitle">安装语言</sys:String>
+    <sys:String x:Key="Installer.Welcome.LanguageDescription">选择安装程序与键巢界面使用的语言，安装完成后仍可在设置中切换。</sys:String>
+    <sys:String x:Key="Installer.Welcome.Feature1">完全离线：不联网、不上传任何数据、不引入遥测。</sys:String>
+    <sys:String x:Key="Installer.Welcome.Feature2">只提示、不执行：不记录按键历史，不保存输入内容，不拦截系统快捷键。</sys:String>
+    <sys:String x:Key="Installer.Welcome.Feature3">安装后常驻托盘，默认不监听；可在托盘菜单中随时启用或退出。</sys:String>
+    <sys:String x:Key="Installer.Welcome.Footnote">本安装程序不会下载任何内容，所有文件均来自安装包本身。</sys:String>
+
+    <sys:String x:Key="Installer.License.Title">许可与隐私</sys:String>
+    <sys:String x:Key="Installer.License.Description">请在继续前阅读以下说明。键巢不联网，也不收集任何个人信息。</sys:String>
+    <sys:String x:Key="Installer.License.Section1Title">一、使用许可</sys:String>
+    <sys:String x:Key="Installer.License.Section1Body">本软件免费提供给个人在 Windows 设备上使用。你可以自由复制和分发未经修改的原始安装包，但不得移除产品名称与版权声明，不得将本软件用于违法用途。</sys:String>
+    <sys:String x:Key="Installer.License.Section2Title">二、功能边界</sys:String>
+    <sys:String x:Key="Installer.License.Section2Body">键巢只展示内置的快捷键说明，不执行任何快捷键，不转发按键，不修改系统设置。默认不拦截系统按键，Win+R、Win+D 等系统快捷键保持原有行为。</sys:String>
+    <sys:String x:Key="Installer.License.Section3Title">三、隐私说明</sys:String>
+    <sys:String x:Key="Installer.License.Section3Body">键巢不联网、不连接服务器、不上传任何数据，不记录按键历史，也不保存输入内容。程序仅在本机 %APPDATA%\KeyNest 下保存界面语言、主题、悬浮窗位置与透明度、触发与显示选项和开机自启开关等配置。</sys:String>
+    <sys:String x:Key="Installer.License.Section4Title">四、开源与第三方组件</sys:String>
+    <sys:String x:Key="Installer.License.Section4Body">键巢仅使用 .NET 8 运行时与 Windows 公开 API，不包含 GPL/AGPL 组件。第三方组件清单随程序安装到安装目录下的 THIRD-PARTY-NOTICES.txt，可随时查看。</sys:String>
+    <sys:String x:Key="Installer.License.Section5Title">五、免责声明</sys:String>
+    <sys:String x:Key="Installer.License.Section5Body">快捷键内容以 Windows 官方行为为准，不同系统版本可能存在差异。本软件按“现状”提供，不对因使用或无法使用本软件造成的损失承担责任。</sys:String>
+    <sys:String x:Key="Installer.License.Accept">我接受许可协议与隐私说明</sys:String>
+    <sys:String x:Key="Installer.License.AcceptHint">同意后才能继续安装。</sys:String>
+
+    <sys:String x:Key="Installer.Directory.Title">安装目录</sys:String>
+    <sys:String x:Key="Installer.Directory.Description">选择安装范围与目标目录。默认目录已经过校验，可直接使用。</sys:String>
+    <sys:String x:Key="Installer.Directory.ScopeTitle">安装范围</sys:String>
+    <sys:String x:Key="Installer.Directory.PerUserTitle">仅为当前用户安装（推荐）</sys:String>
+    <sys:String x:Key="Installer.Directory.PerUserDescription">默认安装到 %LocalAppData%\Programs\KeyNest，无需管理员权限。</sys:String>
+    <sys:String x:Key="Installer.Directory.PerMachineTitle">为所有用户安装</sys:String>
+    <sys:String x:Key="Installer.Directory.PerMachineDescription">默认安装到 %ProgramFiles%\KeyNest，需要管理员权限。</sys:String>
+    <sys:String x:Key="Installer.Directory.LocationTitle">安装位置</sys:String>
+    <sys:String x:Key="Installer.Directory.Footnote">目录将用于存放程序文件与卸载程序；用户配置始终保存在 %APPDATA%\KeyNest，与安装目录无关。</sys:String>
+    <sys:String x:Key="Installer.Directory.BrowseTitle">选择键巢安装目录</sys:String>
+    <sys:String x:Key="Installer.Directory.ScopeNotePerUser">只安装在当前用户目录，无需管理员权限。</sys:String>
+    <sys:String x:Key="Installer.Directory.ScopeNotePerMachine">安装到所有用户，需要管理员权限。</sys:String>
+    <sys:String x:Key="Installer.Directory.PreviousVersionFormat">检测到已安装的键巢 {0}，继续安装将覆盖程序文件，用户配置会保留。</sys:String>
+
+    <sys:String x:Key="Installer.Options.Title">安装选项</sys:String>
+    <sys:String x:Key="Installer.Options.Description">选择要创建的快捷方式与开机启动设置，稍后都可在键巢设置中修改。</sys:String>
+    <sys:String x:Key="Installer.Options.DesktopTitle">创建桌面快捷方式</sys:String>
+    <sys:String x:Key="Installer.Options.DesktopDescription">在桌面放置“键巢 KeyNest”快捷方式。</sys:String>
+    <sys:String x:Key="Installer.Options.StartMenuTitle">创建开始菜单项</sys:String>
+    <sys:String x:Key="Installer.Options.StartMenuDescription">在开始菜单中创建程序入口与卸载入口。</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartTitle">开机自动启动到托盘</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartDescription">默认不勾选。即使勾选，键巢启动后仍默认不监听，只在托盘中常驻。</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartNoteTitle">关于开机启动与监听</sys:String>
+    <sys:String x:Key="Installer.Options.AutoStartNote">开机自启只写入当前用户的 Run 项，值名为 KeyNest，不会写入系统服务。监听的开启与关闭完全由用户在托盘菜单中决定。</sys:String>
+    <sys:String x:Key="Installer.Options.Footnote">安装完成后如需调整，可在托盘菜单 → 设置中随时切换。卸载时可以选择是否保留用户配置。</sys:String>
+
+    <sys:String x:Key="Installer.Progress.Title">正在安装</sys:String>
+    <sys:String x:Key="Installer.Progress.Description">请稍候，安装过程完全在本地进行，不会下载任何内容。</sys:String>
+    <sys:String x:Key="Installer.Progress.Preparing">准备安装。</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationTitle">需要管理员权限</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationDescription">你选择了“为所有用户安装”。请以管理员身份重新启动安装程序，然后重新选择该选项。</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationButton">以管理员身份重新启动</sys:String>
+    <sys:String x:Key="Installer.Progress.ElevationFailed">无法以管理员身份重新启动。请右键点击安装程序，选择“以管理员身份运行”。</sys:String>
+    <sys:String x:Key="Installer.Progress.RetryTitle">安装未完成</sys:String>
+    <sys:String x:Key="Installer.Progress.RetryDescription">请检查磁盘空间与目录权限后重试；也可以取消安装并更换安装目录。</sys:String>
+    <sys:String x:Key="Installer.Progress.Footnote">安装结束后可在键巢设置中调整语言、主题、悬浮窗与开机启动。</sys:String>
+    <sys:String x:Key="Installer.Progress.NeedElevationStatus">每机器安装需要管理员权限。请点击下方按钮重启安装程序。</sys:String>
+    <sys:String x:Key="Installer.Progress.DoneStatus">安装完成，点击“下一步”结束。</sys:String>
+    <sys:String x:Key="Installer.Progress.FailedStatusFormat">安装失败：{0}</sys:String>
+
+    <sys:String x:Key="Installer.Finish.Title">安装完成</sys:String>
+    <sys:String x:Key="Installer.Finish.Description">键巢已准备就绪，勾选下方选项可在安装完成后立即启动并启用监听。</sys:String>
+    <sys:String x:Key="Installer.Finish.InstalledTitle">键巢（KeyNest）已安装</sys:String>
+    <sys:String x:Key="Installer.Finish.RunNowTitle">立即启动键巢并启用监听</sys:String>
+    <sys:String x:Key="Installer.Finish.RunNowDescription">启动后常驻托盘并自动启用；之后仍可随时在托盘菜单停用。</sys:String>
+    <sys:String x:Key="Installer.Finish.NextTitle">接下来可以做什么</sys:String>
+    <sys:String x:Key="Installer.Finish.NextDescription">在托盘菜单中选择“启用”，然后按住 Ctrl、Shift、Alt、Win 或任意组合查看快捷键说明。键巢只提示，不执行任何快捷键。</sys:String>
+    <sys:String x:Key="Installer.Finish.Footnote">用户配置保存在 %APPDATA%\KeyNest，卸载时可选择保留。第三方组件清单位于安装目录下的 THIRD-PARTY-NOTICES.txt。</sys:String>
+
+    <sys:String x:Key="Installer.Validation.Empty">请填写安装目录。</sys:String>
+    <sys:String x:Key="Installer.Validation.InvalidChars">目录中包含非法字符。</sys:String>
+    <sys:String x:Key="Installer.Validation.NotRooted">请输入完整路径，例如 D:\Apps\KeyNest。</sys:String>
+    <sys:String x:Key="Installer.Validation.TooLong">目录路径过长，请选择更短的路径。</sys:String>
+    <sys:String x:Key="Installer.Validation.DriveMissing">目标磁盘不存在。</sys:String>
+    <sys:String x:Key="Installer.Validation.DriveRoot">不能直接安装到磁盘根目录。</sys:String>
+    <sys:String x:Key="Installer.Validation.Protected">不能安装到系统受保护目录，请选择其它位置。</sys:String>
+    <sys:String x:Key="Installer.Validation.NoSpace">磁盘可用空间不足，至少需要 200 MB。</sys:String>
+    <sys:String x:Key="Installer.Validation.NoPermission">没有写入权限，请更换目录或以管理员身份重新运行安装程序。</sys:String>
+    <sys:String x:Key="Installer.Validation.Ok">目录可用。</sys:String>
+    <sys:String x:Key="Installer.Validation.InvalidFormat">路径无效：{0}</sys:String>
+
+    <sys:String x:Key="Installer.Error.PayloadMissing">安装包缺少内置程序文件，请重新获取完整安装包。</sys:String>
+    <sys:String x:Key="Installer.Error.InvalidEntryFormat">安装包内包含非法路径：{0}</sys:String>
+    <sys:String x:Key="Installer.Error.UninstallWrite">无法写入卸载信息，可能是权限不足。</sys:String>
+    <sys:String x:Key="Installer.Error.AutoStartWrite">无法写入开机自启项。</sys:String>
+    <sys:String x:Key="Installer.Progress.Validating">正在校验安装目录…</sys:String>
+    <sys:String x:Key="Installer.Progress.CreatingDirectory">正在创建安装目录…</sys:String>
+    <sys:String x:Key="Installer.Progress.Extracting">正在解压程序文件…</sys:String>
+    <sys:String x:Key="Installer.Progress.ExtractingFormat">正在解压程序文件… {0}%</sys:String>
+    <sys:String x:Key="Installer.Progress.Shortcuts">正在创建快捷方式…</sys:String>
+    <sys:String x:Key="Installer.Progress.UninstallEntry">正在写入卸载信息…</sys:String>
+    <sys:String x:Key="Installer.Progress.AutoStart">正在配置开机启动…</sys:String>
+    <sys:String x:Key="Installer.Progress.Completed">安装完成。</sys:String>
+    <sys:String x:Key="Installer.Shortcut.Uninstall">卸载 键巢 KeyNest</sys:String>
+
+    <!-- ===== 卸载程序 ===== -->
+    <sys:String x:Key="Uninstaller.WindowTitle">卸载 键巢 KeyNest</sys:String>
+    <sys:String x:Key="Uninstaller.Heading">即将卸载键巢</sys:String>
+    <sys:String x:Key="Uninstaller.Description">将删除程序文件、快捷方式、开机自启项与卸载信息。</sys:String>
+    <sys:String x:Key="Uninstaller.KeepConfigTitle">保留用户配置</sys:String>
+    <sys:String x:Key="Uninstaller.KeepConfigDescription">保留界面语言、主题、悬浮窗位置与触发显示选项等设置，位于 %APPDATA%\KeyNest。</sys:String>
+    <sys:String x:Key="Uninstaller.InstallDirectoryLabel">安装目录</sys:String>
+    <sys:String x:Key="Uninstaller.ProgressTitle">正在卸载</sys:String>
+    <sys:String x:Key="Uninstaller.Preparing">准备中…</sys:String>
+    <sys:String x:Key="Uninstaller.Cancel">取消</sys:String>
+    <sys:String x:Key="Uninstaller.Uninstall">卸载</sys:String>
+    <sys:String x:Key="Uninstaller.Confirm">确定要卸载键巢吗？卸载完成后程序将关闭。</sys:String>
+    <sys:String x:Key="Uninstaller.Done">键巢已卸载。程序目录会在几秒后自动清理。</sys:String>
+    <sys:String x:Key="Uninstaller.ErrorFormat">卸载过程中出现错误：&#10;{0}</sys:String>
+    <sys:String x:Key="Uninstaller.FailedStatusFormat">卸载失败：{0}</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Stopping">正在关闭正在运行的键巢…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Shortcuts">正在删除快捷方式…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.AutoStart">正在移除开机自启项…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.UninstallInfo">正在移除卸载信息…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Config">正在删除用户配置…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Files">正在删除程序文件…</sys:String>
+    <sys:String x:Key="Uninstaller.Progress.Done">卸载完成。</sys:String>
+
+</ResourceDictionary>

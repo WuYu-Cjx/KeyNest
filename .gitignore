@@ -1,0 +1,9 @@
+bin/
+obj/
+build/out/
+dist/
+src/KeyNest.Installer/Payload/payload.zip
+.vs/
+*.user
+*.suo
+TestResults/

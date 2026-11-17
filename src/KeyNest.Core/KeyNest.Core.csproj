@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>KeyNest.Core</RootNamespace>
+    <AssemblyName>KeyNest.Core</AssemblyName>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Description>键巢 KeyNest 核心层：快捷键数据、匹配引擎、键盘钩子与配置存储。</Description>
+  </PropertyGroup>
+
+</Project>

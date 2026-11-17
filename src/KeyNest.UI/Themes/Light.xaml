@@ -1,0 +1,36 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- 浅色主题语义色 -->
+
+    <SolidColorBrush x:Key="Brush.Brand" Color="#2E6F63" />
+    <SolidColorBrush x:Key="Brush.BrandSoft" Color="#E4F1ED" />
+    <SolidColorBrush x:Key="Brush.Accent" Color="#2E6F63" />
+    <SolidColorBrush x:Key="Brush.AccentHover" Color="#245A50" />
+    <SolidColorBrush x:Key="Brush.OnAccent" Color="#FFFFFF" />
+
+    <SolidColorBrush x:Key="Brush.Window" Color="#F7F8F7" />
+    <SolidColorBrush x:Key="Brush.Card" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="Brush.CardAlt" Color="#F1F4F2" />
+    <SolidColorBrush x:Key="Brush.Hover" Color="#EDF2F0" />
+    <SolidColorBrush x:Key="Brush.Border" Color="#E2E8E5" />
+    <SolidColorBrush x:Key="Brush.Divider" Color="#ECF0EE" />
+
+    <SolidColorBrush x:Key="Brush.TextPrimary" Color="#1B2421" />
+    <SolidColorBrush x:Key="Brush.TextSecondary" Color="#596B64" />
+    <SolidColorBrush x:Key="Brush.TextTertiary" Color="#8B9A94" />
+
+    <SolidColorBrush x:Key="Brush.Keycap" Color="#F4F7F5" />
+    <SolidColorBrush x:Key="Brush.KeycapBorder" Color="#D8E2DE" />
+    <SolidColorBrush x:Key="Brush.KeycapText" Color="#22312C" />
+
+    <SolidColorBrush x:Key="Brush.Danger" Color="#B4453C" />
+    <SolidColorBrush x:Key="Brush.Success" Color="#2E7D5B" />
+
+    <SolidColorBrush x:Key="Brush.TrackOff" Color="#D9E2DE" />
+    <SolidColorBrush x:Key="Brush.ScrollThumb" Color="#C9D5D0" />
+    <SolidColorBrush x:Key="Brush.ScrollThumbHover" Color="#AEBCB6" />
+    <SolidColorBrush x:Key="Brush.Highlight" Color="#E6F3EE" />
+    <SolidColorBrush x:Key="Brush.Overlay" Color="#66000000" />
+
+</ResourceDictionary>

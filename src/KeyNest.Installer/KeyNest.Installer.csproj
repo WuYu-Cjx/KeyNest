@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>KeyNest.Installer</RootNamespace>
+    <AssemblyName>KeyNest.Installer</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\KeyNest.App\Assets\KeyNest.ico</ApplicationIcon>
+    <Description>键巢 KeyNest 自研安装器。</Description>
+    <AssemblyTitle>键巢 KeyNest 安装程序</AssemblyTitle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KeyNest.UI\KeyNest.UI.csproj" />
+    <ProjectReference Include="..\KeyNest.Core\KeyNest.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 由 build\package.ps1 在打包前生成；未打包时允许编译（运行时给出明确提示）。 -->
+    <EmbeddedResource Include="Payload\payload.zip"
+                      LogicalName="KeyNest.Payload.zip"
+                      Condition="Exists('Payload\payload.zip')" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,209 @@
+<Window x:Class="KeyNest.App.Views.FloatingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:KeyNest.App.ViewModels"
+        Title="{DynamicResource Floating.Title}"
+        Width="424"
+        SizeToContent="Height"
+        MaxHeight="640"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        ShowActivated="False"
+        Topmost="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        FontFamily="{DynamicResource Font.Ui}"
+        TextOptions.TextFormattingMode="Ideal"
+        UseLayoutRounding="True"
+        Opacity="0">
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+
+        <DataTemplate DataType="{x:Type vm:ShortcutSectionHeader}">
+            <Grid Margin="6,12,6,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Title}"
+                               FontSize="12"
+                               FontWeight="SemiBold"
+                               VerticalAlignment="Center"
+                               Foreground="{DynamicResource Brush.Brand}" />
+                    <Border Style="{StaticResource Chip}" Margin="8,0,0,0" Padding="7,1">
+                        <TextBlock Style="{StaticResource Text.Chip}" FontSize="10.5" Text="{Binding CountText}" />
+                    </Border>
+                </StackPanel>
+                <Border Grid.Column="1"
+                        Height="1"
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        Background="{DynamicResource Brush.Divider}" />
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:ShortcutRow}">
+            <Border x:Name="Row"
+                    CornerRadius="{DynamicResource Radius.Chip}"
+                    Padding="8,6"
+                    Margin="0,1"
+                    Background="Transparent">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" MinWidth="112" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Style="{StaticResource Keycap}" VerticalAlignment="Center">
+                        <TextBlock Style="{StaticResource Text.Key}" Text="{Binding Display}" />
+                    </Border>
+
+                    <StackPanel Grid.Column="1" Margin="12,0,8,0" VerticalAlignment="Center">
+                        <TextBlock Style="{StaticResource Text.Body}" Text="{Binding Action}" />
+                        <TextBlock Style="{StaticResource Text.Tertiary}"
+                                   Margin="0,2,0,0"
+                                   Text="{Binding NoteText}"
+                                   Visibility="{Binding HasNote, Converter={StaticResource BoolToVis}}" />
+                    </StackPanel>
+
+                    <Border Grid.Column="2"
+                            Style="{StaticResource Chip}"
+                            VerticalAlignment="Center"
+                            Visibility="{Binding HasOsBadge, Converter={StaticResource BoolToVis}}">
+                        <TextBlock Style="{StaticResource Text.Chip}" FontSize="10.5" Text="{Binding OsText}" />
+                    </Border>
+                </Grid>
+            </Border>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding IsHighlighted}" Value="True">
+                    <Setter TargetName="Row" Property="Background" Value="{DynamicResource Brush.Highlight}" />
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Border Margin="18"
+            CornerRadius="{DynamicResource Radius.Window}"
+            Background="{DynamicResource Brush.Card}"
+            BorderBrush="{DynamicResource Brush.Border}"
+            BorderThickness="1"
+            Effect="{StaticResource Shadow.Float}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- 标题栏：按下即见 -->
+            <Grid Grid.Row="0"
+                  Margin="16,13,16,10"
+                  Background="Transparent"
+                  MouseLeftButtonDown="OnHeaderMouseLeftButtonDown"
+                  MouseMove="OnHeaderMouseMove"
+                  MouseLeftButtonUp="OnHeaderMouseLeftButtonUp">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Border Width="30" Height="30" CornerRadius="10" Background="{DynamicResource Brush.BrandSoft}">
+                    <Viewbox Margin="7">
+                        <Canvas Width="32" Height="32">
+                            <Path Data="M6,22 C6,14.6 10.5,9.6 16,9.6 C21.5,9.6 26,14.6 26,22"
+                                  Stroke="{DynamicResource Brush.Brand}"
+                                  StrokeThickness="2.8"
+                                  StrokeStartLineCap="Round"
+                                  StrokeEndLineCap="Round" />
+                            <Ellipse Canvas.Left="13.2" Canvas.Top="17"
+                                     Width="5.6" Height="5.6"
+                                     Fill="{DynamicResource Brush.Brand}" />
+                        </Canvas>
+                    </Viewbox>
+                </Border>
+
+                <StackPanel Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding PrefixTitle}"
+                               FontSize="14"
+                               FontWeight="SemiBold"
+                               TextTrimming="CharacterEllipsis"
+                               Foreground="{DynamicResource Brush.TextPrimary}" />
+                    <TextBlock Text="{DynamicResource App.ShortTagline}"
+                               FontSize="11"
+                               TextTrimming="CharacterEllipsis"
+                               Foreground="{DynamicResource Brush.TextTertiary}" />
+                </StackPanel>
+
+                <Border Grid.Column="2" Style="{StaticResource Chip}" VerticalAlignment="Center">
+                    <TextBlock Style="{StaticResource Text.Chip}" Text="{Binding PrefixLabel}" />
+                </Border>
+            </Grid>
+
+            <Border Grid.Row="1" Height="1" Background="{DynamicResource Brush.Divider}" />
+
+            <!-- 快捷键列表：虚拟化 + 分组 -->
+            <Grid Grid.Row="2">
+                <ListBox ItemsSource="{Binding Rows}"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         MaxHeight="400"
+                         Margin="8,2,8,2"
+                         Focusable="False"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         VirtualizingPanel.IsVirtualizing="True"
+                         VirtualizingPanel.VirtualizationMode="Recycling">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="Margin" Value="0" />
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <ContentPresenter />
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+
+                <TextBlock Text="{Binding EmptyText}"
+                           HorizontalAlignment="Center"
+                           Margin="24,26"
+                           TextAlignment="Center">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock" BasedOn="{StaticResource Text.Caption}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding HasRows}" Value="False">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+
+            <!-- 底部说明：明确只展示不执行 -->
+            <Border Grid.Row="3"
+                    Padding="16,9"
+                    BorderBrush="{DynamicResource Brush.Divider}"
+                    BorderThickness="0,1,0,0">
+                <TextBlock Text="{Binding FooterNote}"
+                           FontSize="11.5"
+                           TextWrapping="Wrap"
+                           Foreground="{DynamicResource Brush.TextTertiary}" />
+            </Border>
+        </Grid>
+    </Border>
+</Window>
