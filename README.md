@@ -83,7 +83,7 @@ cd KeyNest
 dotnet build KeyNest.sln -c Release
 ```
 
-也可以直接用 Visual Studio 2022 打开 `KeyNest.sln` 后生成解决方案。仓库内的 `build/package.ps1` 用于打包安装程序，产物输出到 `dist/` 目录。
+也可以直接用 Visual Studio 2022 打开 `KeyNest.sln` 后生成解决方案。
 
 ### 🕹 使用教程
 
@@ -146,7 +146,7 @@ dotnet build KeyNest.sln -c Release
 <details>
 <summary>安装时被杀毒软件误报怎么办？</summary>
 
-未签名的本地工具被启发式引擎误报是常见现象。建议先确认安装包来自本仓库的 Releases 页面，并核对发布说明中的校验信息；如有需要，可以选择添加信任或提交误报样本给杀毒软件厂商。作者也会按仓库内 `docs/SIGNING.txt` 的说明推进代码签名，以降低误报率。
+未签名的本地工具被启发式引擎误报是常见现象。建议先确认安装包来自本仓库的 Releases 页面，并核对发布说明中的校验信息；如有需要，可以选择添加信任或提交误报样本给杀毒软件厂商。作者也在评估代码签名方案，以降低误报率。
 </details>
 
 <details>
@@ -183,7 +183,7 @@ dotnet build KeyNest.sln -c Release
 
 ### 📄 许可证
 
-代码以 [Apache-2.0](https://github.com/WuYu-Cjx/KeyNest/blob/main/LICENSE) 许可证发布，版权归作者所有（Copyright 2026 键巢 KeyNest）。项目名称“键巢 / KeyNest”、Logo 与图标保留商标权与版权，不随代码授权。第三方依赖及其许可证见 [THIRD-PARTY-NOTICES.txt](https://github.com/WuYu-Cjx/KeyNest/blob/main/docs/THIRD-PARTY-NOTICES.txt)。
+代码以 [Apache-2.0](https://github.com/WuYu-Cjx/KeyNest/blob/main/LICENSE) 许可证发布，版权归作者所有（Copyright 2026 键巢 KeyNest）。项目名称“键巢 / KeyNest”、Logo 与图标保留商标权与版权，不随代码授权。
 
 ### 🤝 贡献
 
@@ -259,7 +259,7 @@ cd KeyNest
 dotnet build KeyNest.sln -c Release
 ```
 
-You can also open `KeyNest.sln` in Visual Studio 2022 and build the solution there. The bundled `build/package.ps1` script produces the installer package under `dist/`.
+You can also open `KeyNest.sln` in Visual Studio 2022 and build the solution there.
 
 ### 🕹 Usage
 
@@ -322,7 +322,7 @@ No, not by default. KeyNest does not take over a lone Win press and does not int
 <details>
 <summary>My antivirus flags the installer. What should I do?</summary>
 
-Heuristic false positives are common for unsigned local tools. First confirm the installer came from this repository's Releases page and verify the checksum listed in the release notes; if needed, add a trust exception or submit the sample to your vendor as a false positive. The author also follows `docs/SIGNING.txt` to code-sign the binaries and reduce the false-positive rate.
+Heuristic false positives are common for unsigned local tools. First confirm the installer came from this repository's Releases page and verify the checksum listed in the release notes; if needed, add a trust exception or submit the sample to your vendor as a false positive. The author is also evaluating code signing to reduce the false-positive rate.
 </details>
 
 <details>
@@ -359,7 +359,7 @@ The uninstaller offers a "keep configuration" option, checked by default in the 
 
 ### 📄 License
 
-The code is licensed under [Apache-2.0](https://github.com/WuYu-Cjx/KeyNest/blob/main/LICENSE), with copyright held by the author (Copyright 2026 键巢 KeyNest). The "键巢 / KeyNest" name, logo, and icon remain protected by trademark and copyright and are not licensed with the code. Third-party dependencies and their licenses are listed in [THIRD-PARTY-NOTICES.txt](https://github.com/WuYu-Cjx/KeyNest/blob/main/docs/THIRD-PARTY-NOTICES.txt).
+The code is licensed under [Apache-2.0](https://github.com/WuYu-Cjx/KeyNest/blob/main/LICENSE), with copyright held by the author (Copyright 2026 键巢 KeyNest). The "键巢 / KeyNest" name, logo, and icon remain protected by trademark and copyright and are not licensed with the code.
 
 ### 🤝 Contributing
 
