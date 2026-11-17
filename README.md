@@ -27,6 +27,7 @@ KeyNest is a local Windows shortcut companion. Press any Ctrl, Shift, Alt, or Wi
 ### 目录
 
 - [功能特性](#功能特性)
+- [仓库结构](#仓库结构)
 - [安装](#安装)
 - [使用教程](#使用教程)
 - [快捷键触发规则](#快捷键触发规则)
@@ -47,19 +48,19 @@ KeyNest is a local Windows shortcut companion. Press any Ctrl, Shift, Alt, or Wi
 - **圆角悬浮窗不抢焦点**：提示窗口不激活、不夺取输入焦点，不打断当前正在进行的操作。
 - **本地离线、只展示不执行**：不联网、不上传、不记录按键历史，只展示快捷键说明，默认不拦截系统按键。
 
-### 🖼 截图
+### 📁 仓库结构
 
-> 截图占位，发布前替换为实际截图。
-
-| 浅色主题 | 深色主题 |
-| :---: | :---: |
-| <img src="assets/screenshot-light.png" width="420" alt="Light theme screenshot" /> | <img src="assets/screenshot-dark.png" width="420" alt="Dark theme screenshot" /> |
-
-| 设置界面 |
-| :---: |
-| <img src="assets/screenshot-settings.png" width="640" alt="Settings screenshot" /> |
-
-截图占位，发布前替换为实际截图：`assets/screenshot-light.png`、`assets/screenshot-dark.png`、`assets/screenshot-settings.png`。
+```
+src/                  五个项目源码：KeyNest.Core、KeyNest.UI、KeyNest.App、
+                      KeyNest.Installer、KeyNest.Uninstaller
+tests/                单元测试
+assets/               README 使用的项目图标
+dist/                 本地构建出的安装程序 KeyNest-Setup.exe，不纳入版本控制
+KeyNest.sln           解决方案文件
+Directory.Build.props 统一版本号与编译参数
+LICENSE               Apache-2.0 许可证
+README.md             项目说明
+```
 
 ### 📦 安装
 
@@ -203,6 +204,7 @@ dotnet build KeyNest.sln -c Release
 ### Table of Contents
 
 - [Features](#features)
+- [Repository Layout](#repository-layout)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Trigger Rules](#trigger-rules)
@@ -223,19 +225,19 @@ dotnet build KeyNest.sln -c Release
 - **Rounded panel that never steals focus**: the overlay does not activate or grab keyboard focus, so your current task keeps running.
 - **Local, offline, display-only**: no network, no uploads, no keystroke history; it only shows descriptions and does not intercept system keys by default.
 
-### 🖼 Screenshots
+### 📁 Repository Layout
 
-> Placeholder — replace with real screenshots before release.
-
-| Light theme | Dark theme |
-| :---: | :---: |
-| <img src="assets/screenshot-light.png" width="420" alt="Light theme screenshot" /> | <img src="assets/screenshot-dark.png" width="420" alt="Dark theme screenshot" /> |
-
-| Settings |
-| :---: |
-| <img src="assets/screenshot-settings.png" width="640" alt="Settings screenshot" /> |
-
-Placeholder — replace with real screenshots before release: `assets/screenshot-light.png`, `assets/screenshot-dark.png`, `assets/screenshot-settings.png`.
+```
+src/                  Source of the five projects: KeyNest.Core, KeyNest.UI,
+                      KeyNest.App, KeyNest.Installer, KeyNest.Uninstaller
+tests/                Unit tests
+assets/               Project icon used by this README
+dist/                 Locally built installer KeyNest-Setup.exe, not version-controlled
+KeyNest.sln           Solution file
+Directory.Build.props Shared version and compiler settings
+LICENSE               Apache-2.0 license
+README.md             This document
+```
 
 ### 📦 Installation
 
